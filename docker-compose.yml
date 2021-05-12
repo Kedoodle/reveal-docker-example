@@ -1,0 +1,10 @@
+services:
+  reveal:
+    container_name: presentation
+    image: kedoodle/reveal-docker:latest
+    ports:
+      - 8000:8000
+      - 35729:35729
+    volumes:
+      - ./src/index.html:/reveal.js/index.html
+      - ./src/slides.md:/reveal.js/slides.md
